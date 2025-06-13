@@ -1,0 +1,90 @@
+.border {
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(#c37ce7c0, #F9F3F0);
+    background-size: cover;
+}
+
+.categoryHomeMenu h3 {
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: .3s linear;
+    padding: 5px 0;
+    border: solid 1px black;
+    border-radius: 30px;
+    width: 250px;
+    margin: auto;
+}
+
+.categoryHomeMenu h3::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 44px;
+    top: 0;
+    right: 0;
+    background-color: #4b421a2f;
+    color: #F9F3F0;
+    border-radius: 20px;
+
+}
+
+.categoryHomeMenu h3:hover::before {
+    animation: cycle .5s ease-in-out  forwards ;
+    color: #F9F3F0;
+    
+}
+
+@keyframes cycle {
+    from {
+        width: 0px;
+
+    }
+
+    to {
+        width: 250px;
+
+    }
+}
+
+.categoryHomeMenu h2 {
+    margin: 30px auto;
+    text-align: center;
+    color: #c26cc4;
+    font-weight: bold;
+}
+
+.categoryHomeMenu .cover {
+    position: relative;
+    width: 260px;
+    background-color: #e6e6e6;
+    height: 280px;
+    margin: 10px auto;
+    border-radius: 40px;
+}
+
+.categoryHomeMenu img {
+    width: 250px;
+    float: right;
+    transition:.3s transform linear ;
+    border-radius: 40px !important;
+
+}
+.categoryHomeMenu img:hover{
+    transform: scale(1.1,1.1);
+    backdrop-filter: blur(2px)
+
+}
+
+.categoryHomeMenu .badge {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    padding: 10px;
+    font-size: 25px;
+    background-color:#c4c06c1c !important ;
+    color:rgb(231, 208, 34);
+    font-weight: bold;
+    border-radius: 30px;
+}

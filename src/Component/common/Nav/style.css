@@ -1,0 +1,94 @@
+.navbar {
+    background-color: #f9f3f09e;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 32;
+    box-shadow: 0px 0px 15px 1px #be9782;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar-nav .dropdown-menu {
+    max-height: fit-content !important;
+    width: 600px;
+    background-color: #f3eae5;
+    box-shadow: 0px 0px 5px 1px #c5aea2;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categoriesDropdown {
+    width: calc(600px / 4);
+    margin: 0 auto;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+
+.categoriesDropdown:hover {
+    background-color: #ecddd6;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.showSearchIcon {
+    background-color: inherit;
+    border: none;
+    color: rgba(0, 0, 0, 0.604);
+    font-size: 20px;
+    margin: 0 5px;
+    transition: .2s linear;
+}
+
+.showSearchIcon:hover,
+.showSearchIcon:active {
+    background-color: #eadcd4;
+
+}
+
+.cartIcon {
+    position: relative;
+
+}
+
+.cartIcon::before {
+    content: "";
+    background-color: red !important;
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    border-radius: 50%;
+
+}
+.cartCount{
+    position: absolute;
+    top: -12px;
+    right: -2px;
+    color: white;
+}
+@media (max-width:990px) {
+    .navbar {
+        height: 100% !important;
+    }
+
+    .wrapper {
+        display: block;
+    }
+
+    .categoriesDropdown {
+        width: calc(100% / 1);
+
+    }
+
+    .navbar-nav .dropdown-menu {
+        height: 100% !important;
+        width: 97% !important;
+
+    }
+}

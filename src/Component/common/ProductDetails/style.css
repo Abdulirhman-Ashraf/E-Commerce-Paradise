@@ -1,0 +1,11 @@
+.ProductDetails .cartBtn{
+    background-color: #7E35B9;
+}
+.ProductDetails .cover{
+width: 70%;
+min-height: 470px;
+background-color: #eee;
+margin:50px auto;
+padding: 10px;
+border-radius: 15px;
+}
