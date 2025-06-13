@@ -40,9 +40,3 @@ npm run dev
 
 ## Note
 This project is still in development and will continue to evolve as I build more features and improve code quality.
-
-نسخ
-تحرير
-
-نسخffg
-تحري
