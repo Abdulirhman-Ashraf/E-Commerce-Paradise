@@ -1,14 +1,14 @@
 # 🛍️ E-Commerce Paradise
 This is the most ambitious project I've taken on so far, designed to sharpen my front-end skills and deepen my real-world experience with modern tools and architectures.
 
-Completed Features
+## Completed Features
 - Browse products
 - Filter by category
 - View product details
 - Search functionality
 - Add to cart functionality
 - Responsive design 
-What's next? 
+## What's next? 
 - Complete Homepage UI
 - Products page and filter products by genre and rating
 - Add favorites feature
@@ -18,6 +18,7 @@ What's next?
 - Dashboard page
 - Add products
 - Aerformance optimization
+- improve UI Design
 ## 🚀 Tech Stack
 - React
 - Vite
