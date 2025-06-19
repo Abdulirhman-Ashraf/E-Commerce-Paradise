@@ -1,0 +1,32 @@
+.HomeSliders .card {
+    overflow: hidden;
+    padding-bottom: 10px;
+    position: relative;
+    width: 85%;
+    margin: auto !important;
+}
+
+.HomeSliders .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.HomeSliders .detailsBtn {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 130px;
+    left: 110px;
+    margin: auto;
+    font-size: 40px;
+    transition: .1s linear all;
+
+}
+
+.HomeSliders .card:hover .detailsBtn {
+    visibility: visible;
+    opacity: 1;
+}

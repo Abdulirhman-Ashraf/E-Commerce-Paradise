@@ -10,12 +10,13 @@ const SwiperComponent = ({ children }) => {
       <Swiper
         modules={[Keyboard, Autoplay,Pagination]}
         keyboard={{ enabled: true }}
-        spaceBetween={5}
+        spaceBetween={4}
         slidesPerView={4}
         allowTouchMove={true}
         autoplay={{
           delay: 3000, 
           disableOnInteraction: false, 
+          pauseOnMouseEnter: true,
         }}
 
         breakpoints={{

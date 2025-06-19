@@ -66,12 +66,14 @@
     border-radius: 50%;
 
 }
-.cartCount{
+
+.cartCount {
     position: absolute;
     top: -12px;
     right: -2px;
     color: white;
 }
+
 @media (max-width:990px) {
     .navbar {
         height: 100% !important;

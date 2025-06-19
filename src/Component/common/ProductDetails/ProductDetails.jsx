@@ -8,15 +8,19 @@ import {
 } from "../../../store/slices/Products/productsSlice";
 import { Button } from "react-bootstrap";
 import "./style.css";
+
 const ProductDetails = () => {
   const dispatch = useDispatch();
-  const { selectedProduct, loading, cartItems } = useSelector((state) => state.products);
+  const { selectedProduct, loading, cartItems } = useSelector(
+    (state) => state.products
+  );
   const params = useParams();
   useEffect(() => {
     dispatch(resetProduct());
     dispatch(getProduct(params.id));
   }, [dispatch, params.id]);
-const isInCart=cartItems.some((item)=>item.id===selectedProduct?.id)
+
+  const isInCart = cartItems.some((item) => item.id === selectedProduct?.id);
   return (
     <div className="ProductDetails">
       {loading && <h3 style={{ textAlign: "center" }}>Loading.....</h3>}
@@ -40,19 +44,32 @@ const isInCart=cartItems.some((item)=>item.id===selectedProduct?.id)
               <h2>Details</h2>
               <h1> {selectedProduct.title}</h1>
               <h3>{selectedProduct.brand}</h3>
-              <h3>{selectedProduct.rating} / 5</h3>
-              <h3>{selectedProduct.price}$</h3>
+              {selectedProduct.discountPercentage > 10 ? (
+                <>
+                  <h4 style={{ textDecoration: "line-through" }}>
+                    {selectedProduct.price}$
+                  </h4>
+                  <h3>
+                    {(
+                      selectedProduct.price *
+                      (1 - selectedProduct.discountPercentage / 100)
+                    ).toFixed(2)}
+                    $
+                  </h3>
+                </>
+              ) : (
+                <h3>{selectedProduct.price}$</h3>
+              )}
               <h6>{selectedProduct.description}</h6>
-             
+
               <Button
                 className="cartBtn"
                 onClick={() => {
                   dispatch(addToCart(selectedProduct));
-
                 }}
                 disabled={isInCart}
               >
-               {isInCart?"Already in Cart": "Add to Cart" }
+                {isInCart ? "Already in Cart" : "Add to Cart"}
               </Button>
             </div>
           </div>
