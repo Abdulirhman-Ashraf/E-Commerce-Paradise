@@ -1,23 +1,23 @@
 import "swiper/css";
-import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import { Swiper } from "swiper/react";
-import { Keyboard, Autoplay ,Pagination} from "swiper/modules";
+import { Keyboard, Autoplay ,Navigation} from "swiper/modules";
 const SwiperComponent = ({ children }) => {
   return (
     <div className="Swiper">
       <Swiper
-        modules={[Keyboard, Autoplay,Pagination]}
+        modules={[Keyboard, Autoplay,Navigation]}
         keyboard={{ enabled: true }}
         spaceBetween={4}
-        slidesPerView={4}
+        slidesPerView={2}
         allowTouchMove={true}
         autoplay={{
           delay: 3000, 
           disableOnInteraction: false, 
           pauseOnMouseEnter: true,
         }}
+        navigation={true}
 
         breakpoints={{
           0: {

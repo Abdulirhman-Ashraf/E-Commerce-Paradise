@@ -7,6 +7,7 @@ import Cart from './Component/ecommerce/cart/Cart.jsx'
 import "./style/app.css";
 import { Route, Routes } from "react-router-dom";
 import ProductDetails from "./Component/common/ProductDetails/ProductDetails.jsx";
+
 function App() {
   return (
     <>

@@ -1,0 +1,41 @@
+.cartIcon {
+    margin-right: 10px;
+}
+
+
+.cartQuantityAnimation {
+    animation: cartIconScale 300ms ease-out;
+}
+
+@keyframes cartIconScale {
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(0.8);
+    }
+
+    30% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cartCount {
+    display: inline-block;
+    color: rgb(251, 248, 248) !important;
+    background-color: red !important;
+    width: 19px;
+    height: 21px;
+    border-radius: 50%;
+    text-align: center;
+}
+

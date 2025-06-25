@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../../../../store/slices/Products/productsThunk";
 import SwiperComponent from "../../SwiperComponent/SwiperComponent";
@@ -8,46 +8,58 @@ import { SwiperSlide } from "swiper/react";
 import Card from "react-bootstrap/Card";
 import { Badge } from "react-bootstrap";
 
-import { FaExternalLinkAlt } from "react-icons/fa";
+import defaultImage from "../../../../../assets/images.png";
 
 import "./style.css";
 import { Link } from "react-router-dom";
+import Loading from "../../../../../feedback/Loading/Loading";
 const HomeSliders = ({ filterType, value }) => {
   const dispatch = useDispatch();
-  const { elements } = useSelector((state) => state.products);
+  const { elements ,loading,error} = useSelector((state) => state.products);
   useEffect(() => {
     if (!elements.length) {
       dispatch(getProducts());
     }
   }, [dispatch, elements]);
 
-  const filteredProducts = elements.filter((ele) => ele[filterType] >= value);
+  const filteredProducts = useMemo(() => {
+    return elements?.filter((ele) => ele[filterType] >= value);
+  }, [elements, filterType, value]);
+
   return (
     <div className="HomeSliders">
-      <SwiperComponent>
-        {filteredProducts.map((filteredProduct) => {
+    <Loading loading={loading} error={error}>
+    <SwiperComponent >
+        {filteredProducts?.map((filteredProduct) => {
           return (
             <SwiperSlide key={filteredProduct.id}>
               <Card className="card" style={{ margin: "5px" }}>
                 <Card.Img
+                  loading="lazy"
                   className="cardImg"
                   variant="top"
-                  src={filteredProduct.thumbnail}
+                  src={filteredProduct?.thumbnail}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = defaultImage;
+                  }}
                 />
                 <Link
                   to={`/products/${filteredProduct.id}`}
-                  className="detailsBtn"
+                  className="detailsBtn btn btn-white"
                 >
-                  <FaExternalLinkAlt />
+                  see details
                 </Link>
                 <Card.Body>
-                  {filterType === "discountPercentage" ? (
-                    <Badge bg="danger" style={{ fontSize: "16px" }}>
+                  {filterType === "discountPercentage" && (
+                    <Badge
+                      bg="danger"
+                      className="discount"
+                      style={{ fontSize: "16px" }}
+                    >
                       {filteredProduct.discountPercentage}% off
                     </Badge>
-                  ) : (
-                    ""
-                  )}
+                  ) }
 
                   <Card.Title
                     className="description"
@@ -71,15 +83,14 @@ const HomeSliders = ({ filterType, value }) => {
                   ) : (
                     <h4>{filteredProduct.price}$</h4>
                   )}
-                  <Card.Text className="description">
-                    {filteredProduct.description}
-                  </Card.Text>
                 </Card.Body>
               </Card>
             </SwiperSlide>
           );
         })}
       </SwiperComponent>
+    </Loading>
+     
     </div>
   );
 };

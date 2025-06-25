@@ -2,12 +2,42 @@
     background-color: #f9f3f09e;
     position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 32;
     box-shadow: 0px 0px 15px 1px #be9782;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    z-index: 23;
+    
+}
+.navbar .linkHover{
+    position: relative;
+}
+.linkHover::before{
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 8px;
+    background-color: rgba(0, 0, 0, 0.484);
+    width: 0px;
+    height: 2px;
+    transform: .4s linear ;
+    margin-bottom: -2px;
+}
+.linkHover:hover::before{
+
+animation: underline linear .4s forwards;
+}
+
+@keyframes underline {
+    from{
+        width: 0px;
+        height: 1px;
+    }
+    to{
+        
+    width: 90%;
+    height: 2px;
+    }
 }
 
 .navbar-nav .dropdown-menu {
@@ -15,6 +45,7 @@
     width: 600px;
     background-color: #f3eae5;
     box-shadow: 0px 0px 5px 1px #c5aea2;
+
 }
 
 .wrapper {
@@ -30,7 +61,7 @@
 }
 
 .categoriesDropdown:hover {
-    background-color: #ecddd6;
+    background-color:#c5aea276;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -48,30 +79,6 @@
 .showSearchIcon:active {
     background-color: #eadcd4;
 
-}
-
-.cartIcon {
-    position: relative;
-
-}
-
-.cartIcon::before {
-    content: "";
-    background-color: red !important;
-    width: 25px;
-    height: 17px;
-    position: absolute;
-    top: -8px;
-    right: -5px;
-    border-radius: 50%;
-
-}
-
-.cartCount {
-    position: absolute;
-    top: -12px;
-    right: -2px;
-    color: white;
 }
 
 @media (max-width:990px) {

@@ -1,4 +1,5 @@
 # 🛍️ E-Commerce Paradise
+E-Commerce Website (React)
 This is the most ambitious project I've taken on so far, designed to sharpen my front-end skills and deepen my real-world experience with modern tools and architectures.
 
 ## Completed Features
@@ -8,26 +9,29 @@ This is the most ambitious project I've taken on so far, designed to sharpen my 
 - Search functionality
 - Add to cart functionality
 - Responsive design 
-## What's next? 
 - Complete Homepage UI
+
+## What's next? 
 - Products page and filter products by genre and rating
 - Add favorites feature
 - Filter product by category from the navbar
 - Contact page
-- Login/Signup page
+- Login/SignUp page
 - Dashboard page
 - Add products
-- Aerformance optimization
+- Performance optimization
 - improve UI Design
 ## 🚀 Tech Stack
-- React
 - Vite
+- React
 - React Router
+- React Icons
+- React Bootstrap\Bootstrap
 - Redux ToolKit
-- React Bootstrap
+- redux-persist
 - Axios (for api handling)
+- swiper
 - Vercel (for deployment)
-
 ## 📦 Installation
 
 ```bash

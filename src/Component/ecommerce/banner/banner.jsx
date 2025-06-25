@@ -1,8 +1,6 @@
 import React from "react";
 import "swiper/css";
-
 import "./style.css";
-import banner1 from "../../../assets/20288098_6260330.jpg";
 import banner2 from "../../../assets/35808877_8330162.jpg";
 import banner3 from "../../../assets/8443993_3826410.jpg";
 
@@ -19,16 +17,22 @@ const Banner = () => {
         slidesPerView={1}
         allowTouchMove={true}
         loop={true}
-
       >
         <SwiperSlide>
-          <img src={banner1} alt="home banner" />
+          <img
+            src={banner2}
+            alt="Top Rated Product"
+            title="
+          Top Rated Product"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={banner2} alt="home banner" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={banner3} alt="home banner" />
+          <img
+            src={banner3}
+            alt="Top Rated Product"
+            title="
+          Top Rated Product"
+          />
         </SwiperSlide>
       </Swiper>
     </div>

@@ -1,9 +1,22 @@
+
 .HomeSliders .card {
     overflow: hidden;
     padding-bottom: 10px;
     position: relative;
     width: 85%;
+    height: 450px;
     margin: auto !important;
+    position: relative;
+    border-radius: 20px;
+}
+
+.HomeSliders .discount {
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    width: 170px;
+    height: 30px;
+    transform: rotate(-35deg);
 }
 
 .HomeSliders .description {
@@ -12,21 +25,47 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
 
 .HomeSliders .detailsBtn {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    top: 130px;
-    left: 110px;
+    top: 160px;
+    left: 130px;
+    transform: translateX(-50px);
     margin: auto;
-    font-size: 40px;
+    font-size: 25px;
     transition: .1s linear all;
-
+    background-color: blueviolet;
+    border: 1px solid #eee;
+    width: fit-content;
+    height: 60px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .HomeSliders .card:hover .detailsBtn {
     visibility: visible;
     opacity: 1;
+
+}
+
+@media (max-width:900px) {
+    .HomeSliders .card {
+        padding: 5px;
+        height: 360px;
+    }
+
+    .HomeSliders .detailsBtn {
+        top: 160px;
+        left: 110px;
+        font-size: 15px;
+        width: 100px;
+        height: 40px;
+    }
 }

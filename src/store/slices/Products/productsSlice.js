@@ -3,7 +3,6 @@ import { getProduct, getProducts } from "./productsThunk";
 const initialState = {
   elements: [],
   selectedProduct: null,
-  cartItems: [],
   loading: false,
   error: null,
 };
@@ -16,18 +15,6 @@ const productsSlice = createSlice({
       state.loading = false;
       state.error = null;
     },
-    addToCart: (state, action) => {
-      state.cartItems.push(action.payload);
-    },
-    deleteProduct: (state, action) => {
-      const index = state.cartItems.findIndex(
-        (item) => item.id === action.payload
-      );
-      if (index !== -1) {
-        state.cartItems.splice(index, 1);
-      }
-    },
-
   },
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
@@ -59,4 +46,5 @@ const productsSlice = createSlice({
   },
 });
 export const productsReducers = productsSlice.reducer;
-export const { resetProduct, addToCart, deleteProduct,searchedProduct } = productsSlice.actions;
+export const { resetProduct, searchedProduct } =
+  productsSlice.actions;

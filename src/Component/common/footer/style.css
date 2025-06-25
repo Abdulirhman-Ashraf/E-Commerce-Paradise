@@ -1,0 +1,10 @@
+.listItems{
+    justify-content: center;
+
+}
+.listItems li a{
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+}

@@ -3,9 +3,17 @@
 }
 .ProductDetails .cover{
 width: 70%;
-min-height: 470px;
+height: 100%;
 background-color: #eee;
 margin:50px auto;
 padding: 10px;
 border-radius: 15px;
+}
+.quantityMenu{
+    width: 200px;
+    height: 34px;
+
+    padding:0 5px;
+    border-radius: 15px;
+
 }
