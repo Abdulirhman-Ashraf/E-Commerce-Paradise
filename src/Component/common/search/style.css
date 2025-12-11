@@ -1,9 +1,10 @@
-.searchForm{
+.searchForm {
     position: relative;
 }
-.searchResultBox{
-    width:220px;
-    max-height:400px;
+
+.searchResultBox {
+    width: 220px;
+    max-height: 400px;
     background-color: rgba(83, 101, 92, 0.615);
     position: absolute;
     top: 50px;
@@ -12,16 +13,25 @@
     color: #eee;
     overflow: auto;
 }
-.searchResultBox li{
+
+.searchResultBox li {
     color: #eee !important;
     height: fit-content;
     overflow: hidden;
-    padding:5px 0;
+    padding: 5px 0;
 }
-.searchResults{
-    transition: all .2s  linear;
-    color:"#eee";
-    text-decoration:"none";
+
+.searchResults {
+    transition: all .2s linear;
+    color: "#eee";
+    text-decoration: "none";
+
 }
-.searchResults :hover{
-color:blueviolet ;}
+
+.searchResults :hover {
+    color: blueviolet;
+}
+.searchField{
+    width: 95%;
+    margin: auto;
+}

@@ -10,7 +10,7 @@ const SwiperComponent = ({ children }) => {
         modules={[Keyboard, Autoplay,Navigation]}
         keyboard={{ enabled: true }}
         spaceBetween={4}
-        slidesPerView={2}
+        slidesPerView={4}
         allowTouchMove={true}
         autoplay={{
           delay: 3000, 

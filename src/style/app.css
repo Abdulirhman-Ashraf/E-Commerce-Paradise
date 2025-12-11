@@ -1,5 +1,12 @@
-body{
-    background-color:#fff;
-    font-family: Roboto;
+body {
+    height: 100%;
 
+    margin: 0;
+    background-color: #fff;
+    font-family: Roboto;
+}
+
+.app {
+    min-height: 100vh;
+ 
 }

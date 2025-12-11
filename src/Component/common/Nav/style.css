@@ -7,12 +7,25 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 23;
-    
+
 }
-.navbar .linkHover{
+
+.navbar .linkHover {
     position: relative;
+    margin: 0 10px;
 }
-.linkHover::before{
+
+.wishlistNav {
+    margin: 0px 20px;
+    font-size: 20px;
+
+}
+
+.wishlistNav:hover {
+    color: red;
+}
+
+.linkHover::before {
     content: '';
     position: absolute;
     right: 0px;
@@ -20,30 +33,32 @@
     background-color: rgba(0, 0, 0, 0.484);
     width: 0px;
     height: 2px;
-    transform: .4s linear ;
+    transform: .4s linear;
     margin-bottom: -2px;
 }
-.linkHover:hover::before{
 
-animation: underline linear .4s forwards;
+.linkHover:hover::before {
+
+    animation: underline linear .4s forwards;
 }
 
 @keyframes underline {
-    from{
+    from {
         width: 0px;
         height: 1px;
     }
-    to{
-        
-    width: 90%;
-    height: 2px;
+
+    to {
+
+        width: 90%;
+        height: 2px;
     }
 }
 
 .navbar-nav .dropdown-menu {
     max-height: fit-content !important;
-    width: 600px;
-    background-color: #f3eae5;
+    width: 470px;
+    background-color: #f3eae5cd;
     box-shadow: 0px 0px 5px 1px #c5aea2;
 
 }
@@ -57,11 +72,11 @@ animation: underline linear .4s forwards;
     width: calc(600px / 4);
     margin: 0 auto;
     box-sizing: border-box;
-    transition: all .2s linear;
+    transition: all .1s linear;
 }
 
 .categoriesDropdown:hover {
-    background-color:#c5aea276;
+    background-color: #c5aea24a;
     overflow: hidden;
     border-radius: 10px;
 }
@@ -69,15 +84,14 @@ animation: underline linear .4s forwards;
 .showSearchIcon {
     background-color: inherit;
     border: none;
-    color: rgba(0, 0, 0, 0.604);
+    color: rgb(0, 0, 0);
     font-size: 20px;
-    margin: 0 5px;
     transition: .2s linear;
 }
 
 .showSearchIcon:hover,
 .showSearchIcon:active {
-    background-color: #eadcd4;
+    background-color: inherit !important;
 
 }
 
@@ -97,7 +111,16 @@ animation: underline linear .4s forwards;
 
     .navbar-nav .dropdown-menu {
         height: 100% !important;
-        width: 97% !important;
+        width: 90% !important;
 
+    }
+
+    .navbar .linkHover {
+        margin: 0;
+    }
+
+    .wishlistNav {
+        margin: 10px 0;
+        font-size: 20px;
     }
 }

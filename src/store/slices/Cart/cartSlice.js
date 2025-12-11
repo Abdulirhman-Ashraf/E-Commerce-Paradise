@@ -8,12 +8,10 @@ const cartSlice = createSlice({
       state.cartItems.push(action.payload);
     },
     deleteProduct: (state, action) => {
-      const index = state.cartItems.findIndex(
-        (item) => item.id === action.payload
+       state.cartItems = state.cartItems.filter(
+        (item) => item.id !== action.payload
       );
-      if (index !== -1) {
-        state.cartItems.splice(index, 1);
-      }
+   
     },
   },
 }); 

@@ -1,19 +1,33 @@
-.ProductDetails .cartBtn{
+.ProductDetails .cartBtn {
     background-color: #7E35B9;
 }
-.ProductDetails .cover{
-width: 70%;
-height: 100%;
-background-color: #eee;
-margin:50px auto;
-padding: 10px;
-border-radius: 15px;
-}
-.quantityMenu{
-    width: 200px;
-    height: 34px;
 
-    padding:0 5px;
+.ProductDetails .cover {
+    width: 70%;
+    height: 100%;
+    background-color: #eee;
+    margin: 50px auto;
+    padding: 10px;
     border-radius: 15px;
+}
+.ProductDetails .cover {
+    width: 90%;
+    height: 100%;
 
+}
+#dropdown-basic{
+    width: 200px;
+
+}
+.selectQuantityMenu {
+    width: 200px;
+    max-height: 200px;
+    padding: 0 5px;
+    border-radius: 15px;
+    overflow: auto;
+}
+.titleAndWishlistDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

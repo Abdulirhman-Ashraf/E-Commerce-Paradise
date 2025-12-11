@@ -15,6 +15,9 @@ const productsSlice = createSlice({
       state.loading = false;
       state.error = null;
     },
+    cleanUpProducts(state){
+      state.elements = [];
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
@@ -46,5 +49,4 @@ const productsSlice = createSlice({
   },
 });
 export const productsReducers = productsSlice.reducer;
-export const { resetProduct, searchedProduct } =
-  productsSlice.actions;
+export const { resetProduct ,cleanUpProducts } = productsSlice.actions;

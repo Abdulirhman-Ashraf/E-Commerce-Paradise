@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const BasketIcon = ({ cartItems }) => {
   const [animation, setAnimation] = useState(false);
   useEffect(() => {
-    if (cartItems.length===0) {
+    if (cartItems.length === 0) {
       return;
     }
     setAnimation(true);
@@ -15,11 +15,16 @@ const BasketIcon = ({ cartItems }) => {
   }, [cartItems.length]);
   return (
     <div>
-      <FaOpencart className="cartIcon" title="Cart" />
+      <h3 className="cartIcon">
+        <FaOpencart title="Cart" />
 
-      <div className={`cartCount ${animation ? "cartQuantityAnimation" : ""}`}>
-        {cartItems.length}
-      </div>
+        <p
+          className={`cartCount ${animation ? "cartQuantityAnimation" : ""}`}
+          style={{ fontSize: "10px" }}
+        >
+          {cartItems.length}
+        </p>
+      </h3>
     </div>
   );
 };

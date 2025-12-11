@@ -1,7 +1,9 @@
 .cartIcon {
-    margin-right: 10px;
+    color: black;
+    position: relative;
+    font-size: 20px;
+    margin: 0;
 }
-
 
 .cartQuantityAnimation {
     animation: cartIconScale 300ms ease-out;
@@ -30,12 +32,14 @@
 }
 
 .cartCount {
+
+    position: absolute;
     display: inline-block;
     color: rgb(251, 248, 248) !important;
     background-color: red !important;
-    width: 19px;
-    height: 21px;
+    width: 15px;
+    height: 13px;
     border-radius: 50%;
     text-align: center;
+    margin-left: 5px;
 }
-
